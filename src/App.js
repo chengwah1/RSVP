@@ -99,15 +99,15 @@ class App extends Component {
             <tbody>
             <tr>
                 <td>Attending:</td>
-                <td>2</td>
+                <td>{this.state.guests.filter(guest=>guest.isConfirm).length}</td>
             </tr>
             <tr>
                 <td>Unconfirmed:</td>
-                <td>1</td>
+                <td>{this.state.guests.filter(guest=>!guest.isConfirm).length}</td>
             </tr>
             <tr>
                 <td>Total:</td>
-                <td>3</td>
+                <td>{this.state.guests.length}</td>
             </tr>
             </tbody>
           </table>
